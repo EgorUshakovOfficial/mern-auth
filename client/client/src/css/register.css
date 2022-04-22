@@ -1,0 +1,10 @@
+﻿#registration-form{
+    width: 60%;
+    margin: auto;
+}
+
+#registration-form label{
+    width: 100%;
+    text-align: left;
+}
+

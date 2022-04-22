@@ -1,0 +1,23 @@
+﻿#navbar{
+    width: 60%;
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+#navbar li{
+    list-style: none;
+}
+
+.nav-btn{
+    font-size: 1.25em;
+    background: transparent;
+    border: none;
+}
+
+.nav-btn:checked{
+    background: red;
+}
+
+#home-main-view{
+    height: 500px;
+}
