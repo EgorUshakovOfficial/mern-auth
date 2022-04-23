@@ -2,7 +2,8 @@ const defaultState = {
     token:"",
     user: null,
     userFetched: false,
-    loading: true
+    loading: true,
+    timer: ""
 }
 
 // Creates copy of original state 
@@ -21,9 +22,11 @@ export const reducer = (state = defaultState, action) => {
         case "ADD_USER_FAILURE":
             return newState(state, { user: false, userFetched: true })
         case "USER_LOGOUT_SUCCESS":
-            return newState(state, { user: null, token: "", userFetched: false })
+            return newState(state, { user: null, token: "", userFetched: false, timer: "" })
         case "NOT_LOADING":
-            return newState(state, {loading: false})
+            return newState(state, { loading: false })
+        case "ADD_SILENT_TIMER":
+            return newState(state, {timer: action.timer})
         default:
             return state
     }

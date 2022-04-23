@@ -1,6 +1,7 @@
 import {
     addToken,
-    notLoading
+    notLoading,
+    addSilentTimer
 } from './actions.js';
 
 import { fetchLogin } from './fetchlogin.js';
@@ -19,6 +20,9 @@ export const mapDispatchToProps = dispatch => {
         },
         notLoading: () => {
             dispatch(notLoading())
+        },
+        setTimer: timer => {
+            dispatch(addSilentTimer(timer))
         }
     }
 }
